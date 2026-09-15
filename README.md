@@ -12,8 +12,8 @@ The project extends a modern frontend experience into a functional full-stack pr
 
 | Resource | Link |
 |---|---|
-| 🌐 Live Demo | `<YOUR_VERCEL_URL>` |
-| 💻 GitHub Repository | `<YOUR_GITHUB_REPOSITORY_URL>` |
+| 🌐 Live Demo | `https://subscrrproassignment.vercel.app/` |
+| 💻 GitHub Repository | `https://github.com/anuragpandey-01/subscrr.pro_assignment` |
 
 > Replace the placeholders above with the final Vercel deployment URL and GitHub repository URL before submission.
 
@@ -203,54 +203,6 @@ Typed questions remain text-only.
 
 ---
 
-# 🔔 Reminder System
-
-Users can configure reminders for upcoming subscription renewals.
-
-### Reminder options
-
-- Enable or disable reminders
-- Configure reminder timing
-- Set subscription-specific reminder preferences
-
-Reminder settings are stored with the subscription data.
-
-Advanced reminder functionality is part of the **Pro** experience.
-
----
-
-# ⭐ Pro Plan
-
-Subscrr uses a simple Free and Pro model.
-
-## Free Plan
-
-Core subscription-management functionality remains available to free users.
-
-Includes:
-
-- Account creation
-- Subscription management
-- Dashboard
-- Analytics
-- Subscription Health
-- AI Snap
-- AI Assistant
-- Basic reminder functionality
-- Core application features
-
----
-
-## Pro Plan
-
-The Pro plan provides access to:
-
-- Advanced renewal reminders
-
-The Pro upgrade is handled through Razorpay test payments.
-
----
-
 # 💳 Payment Integration
 
 Subscrr integrates Razorpay for the Pro upgrade flow.
@@ -287,7 +239,10 @@ Razorpay is configured in test mode for the assignment/demo environment.
 
 No real financial transaction is required.
 
-🛠️ Technology Stack
+------
+
+🛠️Technology Stack
+
 Frontend
 Next.js 16
 React 19
@@ -312,6 +267,9 @@ Razorpay
 Deployment
 Vercel
 MongoDB Atlas
+
+======
+
 🏗️ Architecture
                          ┌──────────────────┐
                          │      User        │
@@ -343,6 +301,9 @@ MongoDB Atlas
        │ Subscriptions    │                 │ Razorpay         │
        │ Payments         │                 │                  │
        └──────────────────┘                 └──────────────────┘
+
+======
+
 📁 Project Structure
 subscrr/
 │
@@ -390,7 +351,11 @@ subscrr/
 ├── package.json
 ├── tsconfig.json
 └── README.md
+
+======
+
 🔌 API Documentation
+
 Authentication API
 Method	Endpoint	Description
 POST	/api/auth/register	Register a new user
@@ -420,7 +385,11 @@ Payment API
 Method	Endpoint	Description
 POST	/api/payments/create-order	Create Razorpay Pro order
 POST	/api/payments/verify	Verify Razorpay payment
+
+======
+
 🗄️ Database Models
+
 User
 User
 ├── name
@@ -429,6 +398,8 @@ User
 ├── plan
 ├── createdAt
 └── updatedAt
+
+======
 
 Possible plans:
 
@@ -461,6 +432,10 @@ Payment
 ├── plan
 ├── createdAt
 └── updatedAt
+
+
+======
+
 
 Payment statuses:
 
@@ -522,6 +497,8 @@ Server-only API credentials
 
 Sensitive credentials are never intended to be committed to the repository.
 
+======
+
 🎨 UI/UX
 
 The application maintains a clean editorial-inspired visual style with:
@@ -547,6 +524,8 @@ Mobile browsers
 
 Reduced-motion support is also included for users who prefer minimal animation.
 
+======
+
 ⚡ Performance & Reliability
 
 The application includes several reliability-focused improvements.
@@ -570,7 +549,11 @@ Responsive layouts
 Loading states
 Empty states
 Optimized interactions
+
+======
+
 🚀 Local Development
+
 Prerequisites
 
 Make sure the following are installed:
@@ -585,8 +568,10 @@ git clone <YOUR_GITHUB_REPOSITORY_URL>
 Navigate into the project:
 
 cd subscrr
+
 2. Install Dependencies
 npm install
+
 3. Configure Environment Variables
 
 Create a file named:
@@ -602,7 +587,9 @@ JWT_SECRET=
 GEMINI_API_KEY=
 
 RAZORPAY_KEY_ID=
+
 RAZORPAY_KEY_SECRET=
+
 RAZORPAY_PRO_PRICE=
 
 Use .env.example as the reference.
@@ -623,6 +610,9 @@ npm run dev
 Open:
 
 http://localhost:3000
+
+======
+
 🏭 Production Build
 
 Before deployment, verify the production build locally:
@@ -634,6 +624,8 @@ Then:
 npm start
 
 This helps identify production-specific build or runtime issues before deployment.
+
+======
 
 ☁️ Deployment
 
@@ -681,6 +673,8 @@ Production
 
 Never place actual secret values inside this README.
 
+======
+
 🗃️ MongoDB Atlas Production Setup
 
 For the production deployment, use MongoDB Atlas or another accessible MongoDB deployment.
@@ -701,6 +695,8 @@ The key is used server-side.
 
 Do not expose it through a NEXT_PUBLIC_* environment variable.
 
+======
+
 💳 Razorpay Production Setup
 
 The Pro upgrade flow requires:
@@ -713,48 +709,65 @@ For the assignment deployment, Razorpay should remain configured for test mode.
 
 The Razorpay secret key must remain server-side.
 
+======
+
 🧪 Production Verification Checklist
 
 After deploying to Vercel, verify the complete application.
 
 Authentication
+
  Registration works
  Login works
  Logout works
  Protected routes work
  Session persists correctly
+
 Dashboard
+
  Dashboard loads
  Subscription data loads
  Analytics work
  Subscription Health works
  Upcoming payments work
+
 Subscription Management
+
  Add subscription
  Edit subscription
  Delete subscription
  Search subscriptions
  Filter subscriptions
  Data persists after refresh
+
 AI
+
  AI Snap works
  Receipt extraction works
  AI Assistant works
  Voice input works
  Voice responses work
+
 Pro
+
  Razorpay checkout opens
  Test payment works
  Payment verification works
  User upgrades to Pro
  Pro feature gating works
+
 Production
+
  MongoDB connection works
  No secrets are exposed
  Responsive UI works
  No critical Vercel errors
  Production build succeeds
+
+ ======
+
 🧠 Technical Decisions
+
 Next.js
 
 Next.js was retained because the original project was built using the Next.js App Router.
@@ -803,6 +816,10 @@ Order creation
 Checkout
 Payment verification
 Plan upgrade
+
+======
+
+
 ⚖️ Product Decisions & Trade-offs
 Core Features Remain Free
 
@@ -841,6 +858,9 @@ The application does not process real financial transactions.
 The iOS and Apple Watch experiences shown in the marketing UI are product demonstrations rather than native applications.
 Advanced automation and notification infrastructure can be expanded in future versions.
 The application currently focuses on subscription management rather than complete banking/account aggregation.
+
+======
+
 🤖 AI-Assisted Development
 
 AI tools were used during development for:
@@ -859,7 +879,10 @@ AI-generated suggestions were reviewed, adapted, and tested against the applicat
 
 No production secrets or private credentials were intentionally included in AI prompts or committed to the repository.
 
+======
+
 📋 Assignment Alignment
+
 Requirement	Implementation
 Full-stack application	Next.js + API routes + MongoDB
 Backend integration	Functional API endpoints
@@ -875,6 +898,10 @@ AI integration	Gemini AI Snap + Assistant
 Payment integration	Razorpay test mode
 Production deployment	Vercel
 Documentation	README
+
+======
+
+
 🔑 Demo Credentials
 
 For evaluation, a dedicated demo account can be provided.
@@ -884,6 +911,8 @@ Password: <DEMO_PASSWORD>
 Plan: Free / Pro
 
 Use a dedicated test account rather than personal credentials.
+
+======
 
 🌱 Future Improvements
 
@@ -902,6 +931,8 @@ Subscription price-change detection
 More advanced recurring-payment automation
 
 These features are outside the current assignment scope.
+
+======
 
 📦 Submission Checklist
 
@@ -946,6 +977,8 @@ Project
 Subscrr — Smart Subscription Management Platform
 
 A full-stack subscription management platform combining persistent data storage, authentication, analytics, AI-powered tools, renewal reminders, and Razorpay test payments in a modern responsive web application.
+
+======
 
 📄 License
 
